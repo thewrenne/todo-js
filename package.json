@@ -1,0 +1,14 @@
+{
+  "name": "todo-js",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Pure frontend todo list app with vanilla JavaScript.",
+  "scripts": {
+    "dev": "yarn serve",
+    "serve": "http-server . -p 5173 -c-1",
+    "start": "yarn serve"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

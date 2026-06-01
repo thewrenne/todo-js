@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <h1>To-Do List</h1>
+
+      <section class="controls">
+        <form id="todo-form" class="todo-form" autocomplete="off">
+          <div class="title-row">
+            <input
+              id="todo-title-input"
+              name="title"
+              type="text"
+              placeholder="new To-Do"
+              required
+            />
+            <button type="submit">Add</button>
+          </div>
+          <textarea
+            id="todo-description-input"
+            name="description"
+            placeholder="Description"
+            rows="4"
+          ></textarea>
+        </form>
+      </section>
+
+      <section class="items-panel">
+        <ul id="todo-list" class="todo-list"></ul>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

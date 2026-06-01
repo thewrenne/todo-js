@@ -1,0 +1,164 @@
+:root {
+  color-scheme: light;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #ececdf;
+  color: #1f1f1f;
+}
+
+.app-shell {
+  width: min(620px, 92vw);
+  margin: 0 auto;
+  padding: 44px 0 24px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  margin: 0 0 24px;
+  text-align: center;
+  font-size: 48px;
+  letter-spacing: 0.5px;
+}
+
+.controls {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: #ececdf;
+  padding-bottom: 14px;
+}
+
+.todo-form {
+  display: grid;
+  gap: 12px;
+}
+
+.title-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  border: 1px solid #9d9d93;
+  border-radius: 8px;
+  background: #fff;
+  color: #1d1d1d;
+  font-size: 32px;
+  padding: 8px 14px;
+}
+
+textarea {
+  resize: none;
+  min-height: 152px;
+  font-size: 24px;
+  line-height: 1.4;
+}
+
+button[type="submit"] {
+  border: 1px solid #85857a;
+  border-radius: 10px;
+  padding: 8px 18px;
+  font-size: 36px;
+  background: #f5f5f3;
+  cursor: pointer;
+}
+
+.items-panel {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+.todo-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.todo-item {
+  border: 1px solid #d6d6cd;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.todo-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 14px;
+}
+
+.todo-checkbox {
+  width: 28px;
+  height: 28px;
+  flex: 0 0 auto;
+}
+
+.todo-title {
+  margin: 0;
+  flex: 1;
+  font-size: 34px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.todo-delete {
+  border: none;
+  border-radius: 999px;
+  background: #f14949;
+  color: #fff;
+  font-size: 20px;
+  padding: 5px 14px;
+  cursor: pointer;
+}
+
+.todo-description {
+  margin: 0;
+  padding: 0 16px 14px 58px;
+  font-size: 23px;
+  line-height: 1.4;
+  white-space: pre-wrap;
+}
+
+.todo-item.deleted .todo-title,
+.todo-item.deleted .todo-description {
+  text-decoration: line-through;
+  color: #737373;
+}
+
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 36px;
+  }
+
+  input[type="text"],
+  textarea,
+  .todo-title {
+    font-size: 24px;
+  }
+
+  textarea {
+    min-height: 112px;
+  }
+
+  button[type="submit"] {
+    font-size: 28px;
+  }
+}
